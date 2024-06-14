@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300;1,400;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+:root {
+  font-size: 62.5%;
+  --default-border: 1px solid rgba(0, 0, 0, 0.15);
+  --defualt-border-radius: 1.2rem;
+}
+
+
+body {
+  background-image: linear-gradient(-225deg, #DFFFCD 0%, #90F9C4 48%, #39F3BB 100%);
+  font-size: 1.4rem;
+}
+
+.content {
+  display: grid;
+  grid-template-areas:
+    ". . . . ."   
+    ". hero . form ."
+    ". hero . form ."
+    ". . . . ."
+  ;
+
+  gap: 8.5rem;
+}
+
+main {
+  grid-area: form;
+}
+
+aside {
+  grid-area: hero;
+}
+
+aside h1 {
+  font-family: 'Roboto' sans-serif;
+  font-size: 64px;
+  font-weight: 500;
+  line-height: 75px;
+}
+
+aside h1 span, main h2 span {
+  color: #E8FF63;
+}
+
+main {
+  width: 60rem;
+  height: 55rem;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, .212);
+  padding: 4.4rem 5.7rem;
+  border-radius: 2.5rem;
+  position: relative;
+}
+
+main h2 {
+  max-width: 43rem;
+  font-size: 3rem;
+  font-weight: 500;
+  font-weight: 500;
+}
+
+main .actions {
+  display: flex;
+  flex-flow: column wrap;
+}
+
+main .actions a{
+  text-decoration: none;
+  border-radius: var(--defualt-border-radius);
+  font-size: 2.4rem;
+  height: 5.5rem;
+  background-color: #63E8FF;
+  color: #fff;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5.4rem;
+}
+
+main .actions a + a {
+  background-color: #FF63E8;
+  margin-top: 4.8rem;
+}
+
+main header {
+  display: flex;
+  gap: 0 1.8rem;
+  align-items: center;
+}
+
+main header i {
+  font-size: 2.5rem;
+  color: #E8FF63;
+  cursor: pointer;
+}
+
+main header h2 {
+  font-size: 3.7rem;
+}
+
+main footer p {
+  font-size: 1.6rrem;
+  margin-top: 8rem;
+}
+
+main footer a {
+  font-size: 1.8rem;
+  margin-top: 1rem;
+  display: block;
+  text-align: center;
+  color: #000;
+}
+
+main form {
+  margin-top: 1.6rem;
+}
+
+main form label {
+  font-size: 1.8rem;
+  font-weight: 400;
+  text-transform: lowercase;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+main form :is(input, select) {
+  width: 490px;
+  height: 5.5rem;
+
+  background: #fff;
+  border: var(--default-border);
+  border-radius: var(--defualt-border-radius);
+}
+
+main form select {
+  appearance: none;
+}
+
+main form .select-div {
+  position: relative;
+}
+
+main form .select-div::after {
+  top: 1.5rem;
+  right: 1.5rem;
+  font-size: 2.2rem;
+  font-weight: 600;
+  content: '\f107';
+  font-family: 'Font Awesome 6 Free';
+  position: absolute;
+  z-index: 1;
+  color: #63E8FF;
+}
+
+main form .points {
+  position: relative;
+}
+
+main form input + button {
+  position: absolute;
+  right: -4rem;
+  top: calc(2.7rem + 2.5rem);
+  background-color: transparent;
+  border: none;
+  color: #E8FF63;
+  font-size: 2.4rem;
+  cursor: pointer;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar{
+  display: none;
+  -ms-overflow-style: none;  
+  scrollbar-width: none;
+}
